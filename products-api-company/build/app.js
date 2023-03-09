@@ -12,6 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var app = (0, _express["default"])();
 app.set('pkg', _package["default"]);
 app.use((0, _morgan["default"])('dev'));
+app.use(_express["default"].json());
 app.get('/', function (req, res) {
   res.json({
     name: app.get('pkg').name,
